@@ -16,7 +16,7 @@ import { postedAt } from '../utils';
 
 function ThreadCard({ thread }) {
   const navigate = useNavigate();
-  const { id, title, body, category, createdAt, upVotesBy, comments, user } = thread;
+  const { id, title, body, category, createdAt, upVotesBy, totalComments, user } = thread;
 
   return (
     <Card variant="outlined" sx={{ borderRadius: 3 }}>
@@ -63,7 +63,7 @@ function ThreadCard({ thread }) {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
               <CommentIcon fontSize="small" color="action" />
               <Typography variant="body2" color="text.secondary">
-                {comments?.length || 0}
+                {totalComments?.length || 0}
               </Typography>
             </Box>
           </Box>
@@ -82,7 +82,7 @@ ThreadCard.propTypes = {
     category: PropTypes.string,
     createdAt: PropTypes.string.isRequired,
     upVotesBy: PropTypes.arrayOf(PropTypes.string),
-    comments: PropTypes.arrayOf(PropTypes.object),
+    totalComments: PropTypes.arrayOf(PropTypes.object),
     user: PropTypes.shape({
       name: PropTypes.string,
       avatar: PropTypes.string,
