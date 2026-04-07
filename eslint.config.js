@@ -18,6 +18,11 @@ export default [
   },
   daStyle,
   {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     rules: {
       'linebreak-style': 'off',
       'no-alert': 'off',
