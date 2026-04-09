@@ -63,7 +63,7 @@ function ThreadCard({ thread }) {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
               <CommentIcon fontSize="small" color="action" />
               <Typography variant="body2" color="text.secondary">
-                {totalComments?.length || 0}
+                {totalComments || 0}
               </Typography>
             </Box>
           </Box>
@@ -82,7 +82,7 @@ ThreadCard.propTypes = {
     category: PropTypes.string,
     createdAt: PropTypes.string.isRequired,
     upVotesBy: PropTypes.arrayOf(PropTypes.string),
-    totalComments: PropTypes.arrayOf(PropTypes.object),
+    totalComments: PropTypes.number,
     user: PropTypes.shape({
       name: PropTypes.string,
       avatar: PropTypes.string,
