@@ -157,7 +157,7 @@ export {
   asyncGetThreadDetail,
   asyncCreateComment,
   asyncUpvoteThread,
-  // asyncDownvoteThread,
+  asyncDownvoteThread,
   asyncNeutralizeThreadVote,
   asyncUpvoteComment,
   asyncDownvoteComment,
