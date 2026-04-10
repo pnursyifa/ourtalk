@@ -50,7 +50,7 @@ function asyncCreateThread({ title, body, category }) {
 
 export {
   ActionType,
-  setThreadsActionCreator,
+  // setThreadsActionCreator,
   addThreadActionCreator,
   asyncGetAllThreads,
   asyncCreateThread,
