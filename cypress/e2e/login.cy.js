@@ -50,6 +50,11 @@ describe('login spec', () => {
     cy.get('input[id="login-password"]').type('punurs'); // testing cred only yaaa :D
     cy.get('button').contains(/^Login$/).click();
 
+    cy.on('window:alert', () => {
+      throw new Error('Unexpected alert on successful login');
+    });
+
+    cy.get('button').contains(/^Login$/).should('not.exist');
     cy.get('h4').contains('Welcome to OurTalk').should('be.visible');
   });
 });
